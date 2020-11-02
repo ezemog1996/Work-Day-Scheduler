@@ -1,7 +1,7 @@
 console.log(moment().format('MMMM Do YYYY, h:mm:ss a'))
 
 // show day on currentDay
-document.querySelector("#currentDay").textContent = moment().format("dddd");
+document.querySelector("#currentDay").textContent = moment().format("dddd, MMMM Do YYYY");
 
 // change color of text area depending on whether it's past, present, or future
 console.log(moment().format("H"));
@@ -37,7 +37,7 @@ if (events) {
         //for each timeblock loop thorugh data
         for (var k = 0; k < events.length; k++) {
             //check if timeBlobk ide match with data id
-            if ($(timeBlockArray[i]).attr("id") === events[k].id) { 
+            if ($(timeBlockArray[i]).attr("id") === events[k].id) {
                 $(timeBlockArray[i]).find("textarea").val(events[k].text);
             }
         }
